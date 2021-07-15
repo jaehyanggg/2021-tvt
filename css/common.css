@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+/* font-family: 'Playfair Display', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+html, body {font-size: 16px; font-family: 'Playfair Display', serif; position: relative;}
+.wrapper-all {max-width: 1610px; margin: auto;}
+.wrapper {width: 1368px; margin: auto;}
+.bt-default {padding: .875em 1.75em; border: 2px solid #111; border-radius: 10em; color: #111; transition: all .5s;}
+.bt-default:hover {background-color: #111; color: #ffff;}
+
+
+/********************** header-wrapper  *********************/
+.header-wrapper {position: fixed; display: flex; left: 50%; transform: translateX(-50%); margin: 2em auto; align-items: center;}
+.header-wrapper .title {font-size: 1.85em; font-style: italic; text-align: center;}
+.header-wrapper .navi-wrap {display: flex; margin: 0 4em;}
+.header-wrapper .navi-wrap li {margin: 0 2em;}
+.header-wrapper .navi-wrap li:hover {color: thistle; transition: all .25s;}
+.header-wrapper .icon-wrap {display: flex;}
+.header-wrapper .icon-wrap a{margin: 0 1.5em;}
+.header-wrapper .icon-wrap .fab:hover {color: thistle; transition: all .25s;}
+
+
+/********************** bars-wrapper  *********************/
+.bars-wrapper {position: fixed;  padding: 2em; display: none; z-index: 999; width: 30%; height: 100vh;}
+.bars-wrapper .fa-bars {cursor: pointer; font-size: 1.25em;}
+.bars-wrapper .bi-x {cursor: pointer; font-size: 1.5em; display: none;}
+.bars-wrapper .bars-wrap {display: none; margin-top: 50%; margin-left: 10%;}
+.bars-wrapper .bars-wrap .navi-wrap li {margin-bottom: 3em}
+.bars-wrapper .bars-wrap .navi-wrap li:hover {color: #fff; transition: all .5s;}
+.bars-wrapper .bars-wrap .icon-wrap li {margin-top: 2em;}
+.bars-wrapper .bars-wrap .icon-wrap .fab:hover {color: #fff; transition: all .5s;}
+
+
+
+
+
+
+
+
+
+
+/********************** 반응형 설정 *********************/
+@media (max-width: 1199px) {
+	.header-wrapper .navi-wrap {margin: 0 3em;}
+	.header-wrapper .navi-wrap li {margin: 0 1.5em;}
+	.header-wrapper .icon-wrap a{margin: 0 1em;}
+}
+
+@media (max-width: 991px) {
+	.bars-wrapper {display: block;}
+	.header-wrapper .navi-wrap {display: none;}
+	.header-wrapper .icon-wrap {display: none;}
+	.header-wrapper .title {font-size: 1.5em;}
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
+}
