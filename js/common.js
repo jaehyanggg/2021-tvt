@@ -1,5 +1,26 @@
 $(function(){
 
+function scrollHeader(scTop) {
+	var $header = $('.header-wrapper');
+	var $top = $('.bt-moving-top');
+	if(scTop > 300) {
+		$header.hide();
+		$top.show();
+	} else {
+		$header.show();
+		$top.hide();
+	}
+}	
+
+$(window).scroll(onScroll).trigger('scroll');
+
+function onScroll(e) {
+	var scTop = $(this).scrollTop();
+	scrollHeader(scTop);
+}
+
+
+$('.bt-moving-top').click(onMovingTop);
 
 $('.bars-wrapper').find('.fa-bars').click(onClickBars);
 $('.bars-wrapper').find('.bi-x').click(onClickClose);
