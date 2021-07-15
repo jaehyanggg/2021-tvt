@@ -23,6 +23,19 @@ $(function(){
 	$('#youtube2').YTPlayer(options);
 
 	
+	function onModal() {
+		$('.modal-wrapper').show();
+	}
+
+	function onModalClose() {
+		$('.modal-wrapper').hide();
+	}
+
+	$('.music-wrapper img').click(onModal);
+	$('.music-wrapper .albumtitle').click(onModal);
+	$('.music-wrapper .preorder').click(onModal);
+	$('.modal-wrapper').click(onModalClose);
+	$('.modal-wrapper').find('.bt-close').click(onModalClose);
 	
 	
 })
