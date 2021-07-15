@@ -27,6 +27,11 @@ $(function(){
 	$('.bars-wrapper').find('.fa-bars').click(onClickBars);
 	$('.bars-wrapper').find('.bi-x').click(onClickClose);
 
+	function onMovingTop(e) {
+		e.preventDefault();
+		$('html, body').stop().animate({scrollTop : 0}, 100);
+	}
+
 	function onClickBars() {
 		$('.bars-wrapper .fa-bars').hide()
 		$('.bars-wrapper .bi-x').show()
