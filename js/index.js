@@ -1,5 +1,7 @@
 $(function(){
 
+	initContact();
+
 
 	var options = {
 		autoPlay: false, 
@@ -79,7 +81,68 @@ $(function(){
 		{ src:'../img/2.png', name: 'Jonny', role: 'Guitar', insta: '@kwakjonny'},
 		{ src:'../img/1.png', name: 'Chiheon Kim', role: 'Drum', insta: '@choooney'}
  	]);
+	
 
+	 function initContact(){
+		/******************** Global ********************/
+		var emailChk = false;
+		var agreeChk = false;
+		var $form = $('.subscribe-wrap .mail-form')
+		var $input = $('.subscribe-wrap .sub1 .mail-input')
+		var $button = $('.subscribe-wrapper .mail-send')
+		var $alert = $('.subscribe-wrap .valid-alert')
+		var $check = $('.subscribe-wrap .sub3 .form-check')
+
+		/******************** Event Init ********************/
+		$input.blur(onBlur)
+		$check.change(onChange)
+		$form.submit(onSubmit)
+
+
+		/******************** Event Callback ********************/
+		function onBlur() {
+			var email = $(this).val().trim();
+			if(validEmail(email)){
+				emailChk = true;
+				$alert.removeClass('active')
+			} else {
+				emailChk = false;
+				$alert.addClass('active')
+			}
+			changeButton()
+		}
+
+		function onChange() {
+			agreeChk = $(this).is(':checked');
+			changeButton()
+		}
+
+		function onSubmit(e) {
+			e.preventDefault();
+			$form[0].contact_number.value = Math.random() * 100000 | 0;
+			emailjs.sendForm('service_gail', 'template_gmail', this).then(function() {
+          alert('구독 신청이 완료되었습니다.')
+					$form[0].reset();
+      }, function(error) {
+          alert('뉴스레터 신청 오류\n관리자에게 문의 부탁드립니다.')
+      });
+			return false;
+		}
+
+		function changeButton() {
+			console.log(emailChk, agreeChk);
+			if(emailChk && agreeChk) {
+				$button.addClass('active')
+				$button.attr('disabled', false)
+			} else {
+				$button.removeClass('active')
+				$button.attr('disabled', true)
+			}
+		}
+
+
+		emailjs.init('user_tAs0E54yIP6sRVux0k3Jo');
+	}
 	
 	
 })
