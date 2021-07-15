@@ -45,6 +45,10 @@ html, body {font-size: 16px; font-family: 'Playfair Display', serif; position: r
 .bt-moving-top {width: 70px; height: 70px; border-radius: 50%; background-color: #111; color: #fff; font-size: 1em; position: fixed; bottom: 3em; right: 3em; display: none; z-index: 999;}
 
 
+/********************** cookie-wrapper  *********************/
+.cookie-wrapper {z-index: 888; font-family: 'Nanum Gothic', sans-serif; font-size: .8em; position: fixed; width: 100%; bottom: 0; left: 0; background: linen; padding: 2em; color: #111;}
+.cookie-wrapper .cont-wrap > p {line-height: 1.75; margin-bottom: 1em; text-align: center;}
+.cookie-wrapper .bt-confirm {margin-left: 50%; transform: translateX(-50%);}
 
 
 
