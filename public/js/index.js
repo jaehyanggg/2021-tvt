@@ -76,10 +76,10 @@ $(function(){
 	
 
 	var gallery = new Gallery('.photos-wrapper', [ 
-		{ src:'../img/3.PNG', name: 'Yerin Baek', role: 'Vocals and Guitar' ,insta: '@yerin_the_genuine'},
-		{ src:'../img/4.PNG', name: 'Cloud', role: 'Bass Guitar', insta: '@cloudkoh_'},
-		{ src:'../img/2.PNG', name: 'Jonny', role: 'Guitar', insta: '@kwakjonny'},
-		{ src:'../img/1.PNG', name: 'Chiheon Kim', role: 'Drum', insta: '@choooney'}
+		{ src:'../img/3.jpg', name: 'Yerin Baek', role: 'Vocals and Guitar' ,insta: '@yerin_the_genuine'},
+		{ src:'../img/4.jpg', name: 'Cloud', role: 'Bass Guitar', insta: '@cloudkoh_'},
+		{ src:'../img/2.jpg', name: 'Jonny', role: 'Guitar', insta: '@kwakjonny'},
+		{ src:'../img/1.jpg', name: 'Chiheon Kim', role: 'Drum', insta: '@choooney'}
  	]);
 	
 
