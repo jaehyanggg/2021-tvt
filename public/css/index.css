@@ -1,3 +1,5 @@
+body {max-width: 1600px; margin: 0 auto; font-size: 18px;}
+
 /********************** videos-wrapper  *********************/
 .videos-wrapper {width: 80%; margin: 0 auto; position: relative; margin-top: 3em;}
 .videos-wrapper .videos-wrap {width: 100%; background-color: #111; height: 0; padding-top: 56.25%; overflow: hidden;}
@@ -40,17 +42,17 @@
 .subscribe-wrapper {background-color: thistle; width: 80%; margin: 5em auto; color: #fff; padding: 2em;}
 .subscribe-wrapper .subscribe-title {text-align: center; font-size: 1.5em; letter-spacing: .5em; font-style: italic; font-weight: bold;}
 
-.subscribe-wrapper .subscribe-wrap {border-top: 2px solid #fff; border-bottom: 2px solid #fff; margin: 1.5em 0;}
-.subscribe-wrapper .subscribe-wrap .sub1 {margin: 1.5em 0; margin-left: 50%; transform: translateX(-50%); text-align: center;}
-.subscribe-wrapper .subscribe-wrap .sub1 input {width: 15em; margin-left: 2em;}
-.subscribe-wrapper .subscribe-wrap .mail-form .valid-alert {margin-left: 50%; transform: translateX(-50%); font-family: 'Nanum Gothic', sans-serif; font-size: .75em; background-color: purple; color: #fff; padding: 1em 1.5em; text-align: center; border-radius: 5px; position: relative; display: none;}
+.subscribe-wrapper .subscribe-wrap {border-top: 2px solid #fff; border-bottom: 2px solid #fff; margin: 2em 0;}
+.subscribe-wrapper .subscribe-wrap .sub1 {margin: 2em 0; display: flex; justify-content: center;}
+.subscribe-wrapper .subscribe-wrap .sub1 input {width: 10em;}
+.subscribe-wrapper .subscribe-wrap .mail-form .valid-alert {margin-left: 50%; transform: translateX(-50%); font-family: 'Nanum Gothic', sans-serif; font-size: .65em; background-color: purple; color: #fff; padding: .8em 1em; text-align: center; border-radius: 5px; position: relative; display: none;}
 .subscribe-wrapper .subscribe-wrap .mail-form .valid-alert::before {display: block;}
 .subscribe-wrapper .subscribe-wrap .mail-form .valid-alert.active {display: inline-block;}
 
 .subscribe-wrapper .subscribe-wrap .fas {font-size: .5em; color: red; transform: translateY(-1em);}
 
-.subscribe-wrapper .subscribe-wrap .sub2 {margin: 1.5em 0; margin-left: 50%; transform: translateX(-50%); text-align: center;}
-.subscribe-wrapper .subscribe-wrap .sub2 select {color: rgba(0, 0, 0, .6); width: 15em; cursor: pointer; margin-left: 2em;}
+.subscribe-wrapper .subscribe-wrap .sub2 {margin: 2em 0; display: flex; justify-content: center;}
+.subscribe-wrapper .subscribe-wrap .sub2 select {color: rgba(0, 0, 0, .6); width: 10em; cursor: pointer;}
 
 .subscribe-wrapper .subscribe-wrap .sub3 {font-family: 'Nanum Gothic', sans-serif; font-size: .75em; display: flex; margin-bottom: 1em; justify-content: center;}
 .subscribe-wrapper .subscribe-wrap .sub3 label {margin-top: .45em;}
@@ -63,8 +65,7 @@
 
 /********************** 반응형 설정 *********************/
 @media (max-width: 1199px) {
-	.subscribe-wrapper .subscribe-wrap .sub1 input {margin-left: 0; margin-top: 1em; width: 12em;}
-	.subscribe-wrapper .subscribe-wrap .sub2 select {margin-left: 0; margin-top: 1em; width: 12em;}
+	
 }
 
 @media (max-width: 991px) {
@@ -74,7 +75,6 @@
 
 @media (max-width: 767px) {
 	.music-wrapper img {width: 360px; height: 360px;}
-	.subscribe-wrapper .subscribe-wrap .mail-form .valid-alert {font-size: .35em; padding: 1.5em 2em;}
 }
 
 @media (max-width: 575px) {
